@@ -1,23 +1,18 @@
 package org.wiztools.util;
 
 import java.util.Properties;
-import java.util.Collections;
-import java.util.List;
-import java.util.ArrayList;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class SystemPropertyCli{
     public static void main(String[] arg){
         Properties p = System.getProperties();
-        List<String> keys = new ArrayList<String>();
-        for(String key: p.stringPropertyNames()){
-            keys.add(key);
-        }
 
-        // Sort the keys:
-        Collections.sort(keys);
+        // Sort:
+        Map<String, String> m = new TreeMap(p);
 
         // Print sorted system properties:
-        for(String key: keys){
+        for(String key: m.keySet()){
           String value = p.getProperty(key);
           if("\n".equals(value)){
             value = "\\n";
@@ -32,4 +27,3 @@ public class SystemPropertyCli{
         }
     }
 }
-
