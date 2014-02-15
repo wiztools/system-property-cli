@@ -3,7 +3,7 @@
     <groupId>org.wiztools.util</groupId>
     <artifactId>system-property-cli</artifactId>
     <packaging>jar</packaging>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
     <name>system-property-cli</name>
     <url>https://github.com/wiztools/system-property-cli</url>
     
